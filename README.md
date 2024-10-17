@@ -77,6 +77,7 @@ After preprocessing, the class distribution in the `train_aug_resize` directory 
 This structured approach ensures a balanced representation of both classes, addressing the initial data imbalance and setting the stage for effective model training.
 
 # ResNet152
+[Download ResNet152 trained model]([https://drive.google.com/file/d/YOUR-RESNET152-LINK/view?usp=sharing](https://github.com/ArielZeng/-Binary-Classification-of-globally-sclerotic-and-non-sclerotic-glomeruli-/blob/main/ResNet152.ipynb))
 ### Why Use?
 When tasked with distinguishing between sclerotic and non-sclerotic glomeruli from kidney biopsy samples, the first step is to thoroughly understand the dataset’s characteristics and structure. These biopsy samples from human kidneys have been precisely segmented from whole slide images using advanced machine learning techniques and categorized into different subfolders based on whether the glomeruli exhibit global sclerosis. Each image presents a detailed patch of a single glomerulus, providing an ideal dataset for training a robust image classification model.
 
@@ -408,8 +409,8 @@ In medical image classification, doctors can adjust the threshold based on the s
 
 
 # Model File
-Provide a link to the trained model file stored on Google Drive:
-https://your-google-drive-link-to-model](https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive_link
+Provide a link to the trained model file stored on Google Drive: [Download the trained model](https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive_link)
+https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive_link
 
 # Installation
 Instructions on setting up the project environment:
