@@ -410,7 +410,7 @@ In medical image classification, doctors can adjust the threshold based on the s
 
 
 
-# Model File
+# Trained Model File
 Provide a link to the trained model file stored on Google Drive: [Download the trained model](https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive_link)
 https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive_link
 
@@ -419,9 +419,25 @@ https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive
 Instructions on setting up the project environment:
 
 conda env create -f environment.yml
+conda activate your_env_name
 
 # Usage
 [Download evaluation.py](https://github.com/ArielZeng/-Binary-Classification-of-globally-sclerotic-and-non-sclerotic-glomeruli-/blob/main/evaluation.py)
 
 python evaluation.py --input-dir path_to_test_images --model-path path_to_model.pth --output-file output.csv
+
+### File Structure
+
+The project directory is organized as follows:
+
+```
+/project_folder 
+    |- evaluation.py # Evaluation script
+    |- swin_transformer_best.pth # Trained model file
+    |- /test_images # Folder containing test images
+        |- image1.png
+        |- image2.png
+```
+
+This structure helps in understanding where each component of the project is located. Use the `evaluation.py` script to run evaluations with the trained model. Test images are stored in the `test_images` folder.
 
