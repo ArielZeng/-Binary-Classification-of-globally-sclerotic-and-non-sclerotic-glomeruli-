@@ -161,7 +161,7 @@ In the current experiment, although the F1 score increased slightly from 0.9598 
 
 Therefore, I plan to explore more powerful models, such as the Vision Transformer (ViT). Compared to ResNet, ViT’s self-attention mechanism excels at capturing global image features, which is particularly advantageous in complex tasks and imbalanced datasets. ViT not only handles diverse data more flexibly but also learns global dependencies more effectively, enhancing performance and overcoming the limitations of ResNet152, leading to more substantial improvements.
 
-### Next Steps: Vision Transformer (ViT)
+### Why use Vision Transformer (ViT) ?
 
 Given the marginal improvements in ResNet152 and its limitations in addressing data imbalance, the next logical step is to experiment with a more powerful model like **Vision Transformer (ViT)**. ViT leverages self-attention mechanisms, which excel at capturing global features in images, making it especially suited for complex tasks with imbalanced data. ViT’s ability to flexibly process diverse data and learn global dependencies from the start offers the potential to break through ResNet152's limitations and deliver more substantial improvements.
 
@@ -357,6 +357,8 @@ A new approach would be to adjust the classification threshold to find a better 
 Indeed, the current F1 Score of 0.9592 is the best performance among all the ViT models, but there remains a slight gap compared to ResNet152. However, it's noteworthy that ViT achieved an impressive F1 Score of 0.9437 without any parameter adjustments initially, indicating a strong baseline performance on this dataset. In contrast, ResNet152 only reached its best performance after fine-tuning. This suggests that ViT holds greater potential due to its superior ability to capture global image features, as its self-attention mechanism excels at recognizing intricate global dependencies.
 
 That said, ViT still falls short in some areas, such as handling false positives or false negatives, likely due to its relatively weaker ability to capture local details. ResNet152, as a convolutional neural network, excels at capturing local features, while ViT processes images in patches, which might slightly limit its performance in fine-grained feature extraction.
+
+### Why use Swin Transformer?
 
 This leads to the next logical step: if I want to combine the global modeling power of ViT with the local feature extraction strengths of convolutional networks, Swin Transformer would be a promising choice. Swin Transformer leverages a hierarchical structure to progressively aggregate local information while using self-attention to capture global features. This hybrid approach retains ViT's strong global feature handling and enhances local detail capture, potentially offering an even better performance on this dataset.
 
