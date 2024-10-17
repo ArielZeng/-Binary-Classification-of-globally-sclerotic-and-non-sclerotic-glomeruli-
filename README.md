@@ -167,6 +167,7 @@ Given the marginal improvements in ResNet152 and its limitations in addressing d
 
 
 # ViT (Vision Transformer)
+[Download ViT (Vision Transformer)](https://github.com/ArielZeng/-Binary-Classification-of-globally-sclerotic-and-non-sclerotic-glomeruli-/blob/main/ViT.ipynb)
 ### ViT Model1
 
 **Test Results:**
@@ -360,7 +361,7 @@ That said, ViT still falls short in some areas, such as handling false positives
 This leads to the next logical step: if I want to combine the global modeling power of ViT with the local feature extraction strengths of convolutional networks, Swin Transformer would be a promising choice. Swin Transformer leverages a hierarchical structure to progressively aggregate local information while using self-attention to capture global features. This hybrid approach retains ViT's strong global feature handling and enhances local detail capture, potentially offering an even better performance on this dataset.
 
 # Swin Transformer
-
+[Download Swin Transformer)](https://github.com/ArielZeng/-Binary-Classification-of-globally-sclerotic-and-non-sclerotic-glomeruli-/blob/main/Swin_Transformer.ipynb)
 ### Swin Transformer Model1
 
 **Test Results:**
@@ -414,11 +415,13 @@ Provide a link to the trained model file stored on Google Drive: [Download the t
 https://drive.google.com/file/d/1nDHkrSuSAr7xAMgLsBRihIJmRm08Z1wF/view?usp=drive_link
 
 # Installation
+[Download environment.yml](https://github.com/ArielZeng/-Binary-Classification-of-globally-sclerotic-and-non-sclerotic-glomeruli-/blob/main/project_environment.yml)
 Instructions on setting up the project environment:
 
 conda env create -f environment.yml
 
 # Usage
+[Download evaluation.py](https://github.com/ArielZeng/-Binary-Classification-of-globally-sclerotic-and-non-sclerotic-glomeruli-/blob/main/evaluation.py)
 
 python evaluation.py --input-dir path_to_test_images --model-path path_to_model.pth --output-file output.csv
 
