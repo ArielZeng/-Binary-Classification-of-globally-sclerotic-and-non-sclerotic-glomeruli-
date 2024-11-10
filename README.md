@@ -102,7 +102,9 @@ Although the training set AUC is very high, the test set AUC remains close to 1 
 
 The higher Precision but lower Recall suggests that the model is being cautious in predicting the positive class, potentially missing some positive samples. This issue may not necessarily be due to overfitting but could be related to class imbalance or the model's inherent bias. That means that my data augmentation just slightly alleviated the imbalanced problems, not totally solved it.
 
-Next, I'll try using Weighted Cross Entropy to address the low recall caused by class imbalance. The weight for class 0 is calculated as (3292+2948)/3292 = 1.19, and for class 1, it's (3292+2948)/2948 = 1.21, which is roughly 1:1.02. To make the model focus more on class 1, I will start by setting the class weight to 1:2 and see how it impacts the performance.
+Next, I'll try using Weighted Cross Entropy to address the low recall caused by class imbalance. Instead of directly using the ratio 
+3292/2948, which only considers class proportions without accounting for the overall dataset, I used the global weight calculation: 
+(3292+2948)/3292=1.19 for class 0 and (3292+2948)/2948=1.21 for class 1, roughly a 1:1.02 ratio. This approach balances weights across both classes, making the model more sensitive to the minority class without extreme values that could destabilize training. To further emphasize class 1, I'll set the weight to 1:2 and observe its impact on performance.
 
 
 ### ResNet152 Model 2
