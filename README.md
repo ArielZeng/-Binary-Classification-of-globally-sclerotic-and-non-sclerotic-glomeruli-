@@ -100,7 +100,7 @@ Moreover, ResNet152 has been pre-trained on large-scale image recognition tasks 
 
 Although the training set AUC is very high, the test set AUC remains close to 1 (0.9908), indicating that the model still exhibits strong discriminatory power on the test data without significant overfitting. Overfitting typically shows up as a high training AUC with a much lower test AUC (e.g., dropping to below 0.80). 
 
-The higher Precision but lower Recall suggests that the model is being cautious in predicting the positive class, potentially missing some positive samples. This issue may not necessarily be due to overfitting but could be related to class imbalance or the model's inherent bias.
+The higher Precision but lower Recall suggests that the model is being cautious in predicting the positive class, potentially missing some positive samples. This issue may not necessarily be due to overfitting but could be related to class imbalance or the model's inherent bias. That means that my data augmentation just slightly alleviated the imbalanced problems, not totally solved it.
 
 Next, I'll try using Weighted Cross Entropy to address the low recall caused by class imbalance. The weight for class 0 is calculated as (3292+2948)/3292 = 1.19, and for class 1, it's (3292+2948)/2948 = 1.21, which is roughly 1:1.02. To make the model focus more on class 1, I will start by setting the class weight to 1:2 and see how it impacts the performance.
 
