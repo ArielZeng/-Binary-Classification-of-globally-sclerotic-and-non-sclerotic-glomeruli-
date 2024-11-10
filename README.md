@@ -159,7 +159,7 @@ The F1 score improved from 0.9568 to 0.9598, indicating that a class weight of 1
 - F1 Score: 0.9600  
 - Confusion Matrix: `[[696, 10], [3, 156]]`
 
-In the current experiment, although the F1 score increased slightly from 0.9598 to 0.96 and the validation loss dropped to 10+, indicating some improvement due to parameter adjustments, the overall enhancement was not significant. This suggests that ResNet152 has nearly reached its limit in addressing the data imbalance issue. While fine-tuning parameters provided minor optimizations, the potential for further improvement within this framework is limited.
+In the current experiment, although the F1 score increased slightly from 0.9598 to 0.96, indicating some improvement due to parameter adjustments, there are still cases of misclassification with counts of 10 and 3, which I aim to reduce to zero. This suggests that ResNet152 has nearly reached its limit in addressing the data imbalance issue. While fine-tuning parameters provided minor optimizations, the potential for further improvement within this framework is limited.
 
 Therefore, I plan to explore more powerful models, such as the Vision Transformer (ViT). Compared to ResNet, ViT’s self-attention mechanism excels at capturing global image features, which is particularly advantageous in complex tasks and imbalanced datasets. ViT not only handles diverse data more flexibly but also learns global dependencies more effectively, enhancing performance and overcoming the limitations of ResNet152, leading to more substantial improvements.
 
